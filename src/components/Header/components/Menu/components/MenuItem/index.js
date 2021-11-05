@@ -4,8 +4,10 @@ import styles from './style.module.scss'
 class MenuItem extends React.Component {
     render() {
         return(
-            <li className = {styles.menuItem}>
+            <li className={styles.menuItem}>
+                <a href={this.props.href}>
                 {this.props.title}
+                </a>
             </li>
         )
     }

@@ -5,12 +5,12 @@ import MenuItem from './components/MenuItem';
 class Menu extends React.Component {
     render() {
         return(
-            <ul className = {styles.menu}>
-                <MenuItem title ='Курсы'/>
-                <MenuItem title ='Мастер-классы'/>
-                <MenuItem title ='Преподаватели'/>
-                <MenuItem title ='Блог'/>
-                <MenuItem title ='Контакты'/>
+            <ul className={styles.menu}>
+                <MenuItem title='Курсы'/>
+                <MenuItem title='Мастер-классы'/>
+                <MenuItem title='Преподаватели'/>
+                <MenuItem title='Блог'/>
+                <MenuItem title='Контакты'/>
             </ul>
         )
     }

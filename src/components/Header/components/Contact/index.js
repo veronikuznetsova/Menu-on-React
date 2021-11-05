@@ -6,7 +6,7 @@ import Social from './components/Social';
 class Contact extends React.Component{
     render() {
         return(
-            <div className = {styles.contact}>
+            <div className={styles.contact}>
                 <Phone/>
                 <Social/>
             </div>

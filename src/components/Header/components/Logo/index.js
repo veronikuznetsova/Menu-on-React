@@ -1,13 +1,11 @@
 import React from 'react';
 import styles from './style.module.scss';
-import LogoImg from './components/LogoImg';
+import LogoImage from './images/logo.svg'
 
 class Logo extends React.Component{
     render() {
         return(
-            <a className = {styles.logo} href = ''>
-                <LogoImg/>
-            </a>
+            <img className={styles.logo} href='' src={LogoImage} /> 
         )
     }
 }

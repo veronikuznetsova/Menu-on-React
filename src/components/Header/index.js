@@ -17,7 +17,7 @@ class Header extends React.Component {
         return(
             // <header className ='header'>Header</header>
             // <header style = {styles}>Header</header>
-            <header className = {styles.header}>
+            <header className={styles.header}>
                 <Logo/>
                 <Menu/>
                 <Contact/>

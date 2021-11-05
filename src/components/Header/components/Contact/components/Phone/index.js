@@ -5,9 +5,9 @@ import PhoneItem from './components/PhoneItem';
 class Phone extends React.Component{
     render() {
         return (
-            <div className = {styles.phone}>
-                <PhoneItem href = 'tel: +375 29 105-59-59' title = '+375 29 105-59-59'/>
-                <PhoneItem href = 'tel: +375 29 305-59-59' title = '+375 29 305-59-59'/>
+            <div className={styles.phone}>
+                <PhoneItem value='+375 29 105-59-59'/>
+                <PhoneItem value='+375 29 305-59-59'/>
             </div>
         )
     }
