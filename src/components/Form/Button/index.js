@@ -4,8 +4,10 @@ import styles from './style.module.scss'
 class Button extends React.Component{
     render() {
         return (
-            <button onClick={this.props.onClick}
-                className={styles.button}>
+            <button 
+                onClick={this.props.onClick}
+                className={styles.button}
+            >
                 {this.props.children}
             </button>
         )
