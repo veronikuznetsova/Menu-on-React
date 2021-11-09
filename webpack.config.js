@@ -30,4 +30,9 @@ module.exports = {
   open:true,
   liveReload: true
 },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components')
+    }
+  }
 }
