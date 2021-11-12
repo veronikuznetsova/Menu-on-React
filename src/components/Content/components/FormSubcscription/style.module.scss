@@ -1,0 +1,19 @@
+.formSub{
+    max-width: 250px;
+    max-height: 400px;
+    width: 100%;
+    background-color:  black;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 30px;
+    color: white;
+}
+
+.formError{
+    color: white;
+    background-color: #F95D51;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}

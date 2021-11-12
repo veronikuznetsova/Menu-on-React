@@ -8,6 +8,7 @@ class Input extends React.Component{
               type={this.props.type}
               className={styles.input} 
               onChange={this.props.onChange} 
+              {...this.props}
             />
         )
     }
