@@ -10,9 +10,9 @@ class Content extends React.Component {
         return(
             <div className={styles.content}>
                 {/* <Form/> */}
-                {/* <Todo /> */}
+                <Todo />
                 {/* <ShouldComponentUpdateExample /> */}
-                <FormSubscription />
+                {/* <FormSubscription /> */}
             </div>
         )
     }

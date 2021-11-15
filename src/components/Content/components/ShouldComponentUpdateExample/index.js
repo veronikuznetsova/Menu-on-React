@@ -26,8 +26,6 @@ class ShouldComponentUpdateExample extends React.PureComponent{
     // }
 
     render() {
-        console.log('render');
-
         return (
             <div>
                 <span>click count: {this.state.count}</span>

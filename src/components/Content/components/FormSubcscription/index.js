@@ -14,13 +14,13 @@ class FormSubcscription extends React.Component{
         }
     }
 
-    onChangeHandler1 = (event) => {
+    onChangePhoneHandler = (event) => {
         this.setState({
             tel: event.target.value,
         });
     }
 
-    onChangeHandler2 = (event) => {
+    onChangeCodeHandler = (event) => {
         this.setState({
             text: event.target.value,
         });
@@ -47,14 +47,14 @@ class FormSubcscription extends React.Component{
     render() {
         return(
             <form className={styles.formSub}>
-                <Input onChange={this.onChangeHandler1} type='tel' placeholder="Номер телефона"/>
-                <Input onChange={this.onChangeHandler2} type='text' placeholder='Промокод'/>
+                <Input onChange={this.onChangePhoneHandler} type='tel' placeholder="Номер телефона"/>
+                <Input onChange={this.onChangeCodeHandler} type='text' placeholder='Промокод'/>
                 {/* {this.state.tel.length < 7 && (
                     <div>Введи тел</div>
                 )} */}
-                {this.state.hasError && 
+                {this.state.hasError && (
                     <div className={styles.formError}>Пожалуйста, заполните все обязательные поля</div>
-                }
+                )}
                 <Button onClick={this.onClick}>Записаться</Button>
             </form>
         )
