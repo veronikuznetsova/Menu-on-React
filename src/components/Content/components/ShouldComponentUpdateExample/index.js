@@ -12,11 +12,10 @@ class ShouldComponentUpdateExample extends React.Component{
     }
 
     onClickHandler = (event) => {
-        // this.setState({
-        //     // count: this.state.count + 1
-        //     count: 10
-        // });
-        this.props.onClickHandler(event);
+        this.setState({
+            // count: this.state.count + 1
+            count: 10
+        });
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -25,7 +24,7 @@ class ShouldComponentUpdateExample extends React.Component{
         //     return true;
         // }
         // return false;
-        this.props.ShouldComponentUpdate(nextProps, nextState);
+        this.props.update(nextProps, nextState);
     }
 
     render() {
