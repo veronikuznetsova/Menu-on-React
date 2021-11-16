@@ -1,7 +1,8 @@
 import React from "react";
 import Button from 'components/Form/Button';
+import Memo from '../../../../HOC/memo';
 
-class ShouldComponentUpdateExample extends React.PureComponent{
+class ShouldComponentUpdateExample extends React.Component{
     constructor(props) {
         super(props);
 
@@ -11,19 +12,21 @@ class ShouldComponentUpdateExample extends React.PureComponent{
     }
 
     onClickHandler = (event) => {
-        this.setState({
-            // count: this.state.count + 1
-            count: 10
-        });
+        // this.setState({
+        //     // count: this.state.count + 1
+        //     count: 10
+        // });
+        this.props.onClickHandler(event);
     }
 
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     console.log(this.state, nextState)
-    //     if(this.state.count !== nextState.count) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
+    shouldComponentUpdate(nextProps, nextState) {
+        // console.log(this.state, nextState)
+        // if(this.state.count !== nextState.count) {
+        //     return true;
+        // }
+        // return false;
+        this.props.ShouldComponentUpdate(nextProps, nextState);
+    }
 
     render() {
         return (
@@ -35,4 +38,4 @@ class ShouldComponentUpdateExample extends React.PureComponent{
     }
 }
 
-export default ShouldComponentUpdateExample;
+export default Memo(ShouldComponentUpdateExample);
