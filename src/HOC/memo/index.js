@@ -1,28 +1,27 @@
 import React from "react";
+import _ from 'lodash';
 
-function Memo(component) {
-    return class extends React.PureComponent {
-    constructor(props) {
-        super(props);
-    }
+function memo(Component) {
+    return class extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    // }
 
     shouldComponentUpdate(nextProps, nextState) {
     console.log(this.props, nextProps)
-    if(this.props !== nextProps) {
-        return true;
-    }
-        return false;
-    }   
+       if (_.isEqual(this.props, nextProps)) {
+            return false
+        }
+        return true
+    }  
 
     render() {
         return (
-            <Component 
-            update={this.shouldComponentUpdate}
-            />
+            <Component {...this.props} />
         )
     }
    }
 }
 
-export default Memo;
+export default memo;
 
