@@ -2,7 +2,7 @@ import React from "react";
 import styles from './style.module.scss';
 import Button from 'components/Form/Button';
 
-class TodoItem extends React.Component{
+class TodoItem extends React.PureComponent{
 
     onClickHandler = () => {
         this.props.onRemove(this.props.id)
