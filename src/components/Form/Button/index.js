@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './style.module.scss'
 
-class Button extends React.Component{
+class Button extends React.PureComponent{
     render() {
         return (
             <button 
