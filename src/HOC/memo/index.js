@@ -9,10 +9,11 @@ function memo(Component) {
 
     shouldComponentUpdate(nextProps, nextState) {
     console.log(this.props, nextProps)
-       if (_.isEqual(this.props, nextProps)) {
-            return false
-        }
-        return true
+    return !_.isEqual(this.props, nextProps)
+    //    if (_.isEqual(this.props, nextProps)) {
+    //         return false
+    //     }
+    //     return true
     }  
 
     render() {
