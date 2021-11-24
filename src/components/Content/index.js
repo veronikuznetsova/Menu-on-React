@@ -11,6 +11,7 @@ import PreviewImage from '../Image/versions/PreviewImage';
 import FunctionalComponent from './components/FunctionalComponent';
 import TodoFunc from './components/Todo/TodoFunc';
 import Users from './components/Users';
+import HomeWork from './components/HomeWork';
 
 class Content extends React.Component {
     render() {
@@ -25,7 +26,8 @@ class Content extends React.Component {
                 <FunctionalComponent title='hello'/>  */}
                 {/* <TodoFunc /> */}
             {/* <FunctionalComponent title='hello'/> */}
-            <Users />
+            {/* <Users /> */}
+            <HomeWork />
             </div>
         )
     }
