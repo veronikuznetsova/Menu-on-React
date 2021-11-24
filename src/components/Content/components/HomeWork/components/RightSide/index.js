@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Input  from 'components/Form/Input';
 import styles from './style.module.scss';
+import { InputContext } from '../../index';
 
 const RightSide = () => {
-    const [value, setValue] = useState('');
-
-    const onChangeInput = (value) => {
-        setValue(value)
-    }
+    const {inputs, onChangeHandler} = useContext(InputContext);
 
     return (
         <div className={styles.rightSide}>
-            <Input onChange={onChangeInput} value={value}/>
+            <Input onChange={onChangeHandler} value={inputs}></Input>
         </div>
     )
 } 

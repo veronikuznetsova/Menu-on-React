@@ -1,26 +1,31 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import styles from './style.module.scss';
 import LeftSide from './components/LeftSide';
 import RightSide from './components/RightSide';
-import Input  from 'components/Form/Input';
 
-const HomeWork = () => {
-    const [value, setValue] = useState('');
+const InputContext = React.createContext();
+const { Provider } = InputContext;
 
-    const onChangeInput = (value) => {
-        setValue(value)
+const HomeWork = () => { 
+
+    const [inputs, setInputs] = useState('');
+    
+    const onChangeHandler = (value) => {
+        setInputs(value)
     }
 
-    return (
-        <div className={styles.homeWork}>
-            <div className={styles.side}>
-            <Input onChange={onChangeInput} value={value}/>
-            </div>
-            <div className={styles.side}>
-            <Input onChange={onChangeInput} value={value}/>
-            </div>
-        </div>
-    )
-} 
+        return(
+            <Provider value={{inputs, onChangeHandler}}>
+                <div className={styles.homeWork}>
+                <LeftSide />
+                <RightSide />
+                </div>
+            </Provider>
+        )
+}
+
+export {
+    InputContext
+}
 
 export default HomeWork;
