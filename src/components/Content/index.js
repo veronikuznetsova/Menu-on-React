@@ -24,6 +24,9 @@ import UsersPage from '../../pages/UsersPage';
 import UsersDetailPage from '../../pages/UsersDetailPage';
 import MyAccount from '../../pages/MyAccount';
 import DownloadPage from '../../pages/DownloadPage';
+import DetailPost from '../../pages/DetailPost';
+import PostPage from '../../pages/PostPage';
+import CommentPage from '../../pages/CommentPage';
 
 class Content extends React.Component {
     render() {
@@ -52,6 +55,10 @@ class Content extends React.Component {
                 <Route path='/users/:id' element={<UsersDetailPage />} />
                 <Route path='/my-account' element={<MyAccount />}>
                     <Route path='download' element={<DownloadPage />} />
+                </Route>
+                <Route path='/posts' element={<DetailPost/>} />
+                <Route path='/posts/:id' element={<PostPage/>}>
+                    <Route path='/posts/:id/:comments' element={<CommentPage/>}/>
                 </Route>
             </Routes>
             </div>
