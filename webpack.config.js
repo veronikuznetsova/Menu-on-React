@@ -18,7 +18,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
         type: 'asset/resource',
       },
     ] 
@@ -27,14 +27,23 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'public'),
   },
+
   open:true,
-  liveReload: true
+  liveReload: true,
+
+  port: 8080,
+    historyApiFallback: {
+      index: 'index.html'
+    },
 },
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components'),
       hoc: path.resolve(__dirname, 'src/HOC'),
       images: path.resolve(__dirname, 'src/images'),
+      video: path.resolve(__dirname, 'src/video'),
+      pages: path.resolve(__dirname, 'src/pages'),
+      redux_main: path.resolve(__dirname, 'src/redux'),
     }
   }
 }

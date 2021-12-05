@@ -6,11 +6,11 @@ class Menu extends React.Component {
     render() {
         return(
             <ul className={styles.menu}>
-                <MenuItem title='Курсы'/>
-                <MenuItem title='Мастер-классы'/>
-                <MenuItem title='Преподаватели'/>
-                <MenuItem title='Блог'/>
-                <MenuItem title='Контакты'/>
+                <MenuItem to='/kursy-programmirovaniya' title='Курсы'/>
+                <MenuItem to='besplatnye-probnye-zanatia' title='Мастер-классы'/>
+                <MenuItem to='teachers' title='Преподаватели'/>
+                <MenuItem to='blog' title='Блог'/>
+                <MenuItem to='contact' title='Контакты'/>
             </ul>
         )
     }

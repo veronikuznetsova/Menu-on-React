@@ -6,8 +6,15 @@
     margin-right: 30px;
     font-family: Arial,sans-serif;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .menuItem:last-child{
     margin-right: 0;
 }
+
+.active{
+    color:yellow;
+}
+
