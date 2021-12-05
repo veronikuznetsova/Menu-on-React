@@ -15,7 +15,6 @@ class Input extends React.Component{
               className={styles.input} 
             //   onChange={this.props.onChange} 
             onChange={this.onChangeHandler} 
-            value={this.props.value}
             />
         )
     }
