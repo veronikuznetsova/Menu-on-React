@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addCount, removeCount } from 'redux_main/actions/count';
 import Input from 'components/Form/Input';
 import { addTodo, setLoading, asyncAddTodo } from 'redux_main/actions/todo';
+import { changeLight } from '../../redux/actions/light';
 
 const Footer = () => {
     // const count = useSelector(state => state.count.count);
@@ -36,6 +37,10 @@ const Footer = () => {
         setValue(value)
     }
 
+    const onClickHandler2 = () => {
+        dispatch(changeLight());
+    }
+
         return(
             <footer className={styles.footer}>
                 {/* <Button onClick={onClickHandler}>+</Button>
@@ -43,6 +48,7 @@ const Footer = () => {
 
             <Button onClick={onClickHandler}>add new item</Button>
             <Input onChange={onChangeHandler}/>
+            <Button onClick={onClickHandler2}>Light / Dark</Button>
             </footer>
         )
 }
