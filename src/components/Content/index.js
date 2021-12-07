@@ -15,15 +15,18 @@ import HomeWork from './components/HomeWork';
 import VideoPlayer from './components/VideoPlayer';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
-import CoursePage from '../../pages/CoursePage';
-import MasterclassPage from '../../pages/MasterclassPage';
-import PrepodPage from '../../pages/PrepodPage';
-import BlogPage from '../../pages/BlogPage';
-import ContactPage from '../../pages/ContactPage';
-import UsersPage from '../../pages/UsersPage';
-import UsersDetailPage from '../../pages/UsersDetailPage';
-import MyAccount from '../../pages/MyAccount';
-import DownloadPage from '../../pages/DownloadPage';
+import CoursePage from 'pages/CoursePage';
+import MasterclassPage from 'pages/MasterclassPage';
+import PrepodPage from 'pages/PrepodPage';
+import BlogPage from 'pages/BlogPage';
+import ContactPage from 'pages/ContactPage';
+import UsersPage from 'pages/UsersPage';
+import UsersDetailPage from 'pages/UsersDetailPage';
+import MyAccount from 'pages/MyAccount';
+import DownloadPage from 'pages/DownloadPage';
+import DetailPost from 'pages/DetailPost';
+import PostPage from 'pages/PostPage';
+import CommentPage from 'pages/CommentPage';
 
 class Content extends React.Component {
     render() {
@@ -52,6 +55,10 @@ class Content extends React.Component {
                 <Route path='/users/:id' element={<UsersDetailPage />} />
                 <Route path='/my-account' element={<MyAccount />}>
                     <Route path='download' element={<DownloadPage />} />
+                </Route>
+                <Route path='/posts' element={<DetailPost/>} />
+                <Route path='/posts/:id' element={<PostPage/>}>
+                    <Route path=':comments' element={<CommentPage/>}/>
                 </Route>
             </Routes>
             </div>
