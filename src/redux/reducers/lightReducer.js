@@ -1,5 +1,5 @@
 const initial = {
-    light: 'light'
+    light: true
 }
 
 function lightReducer(state = initial, action) {

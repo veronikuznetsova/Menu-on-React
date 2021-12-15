@@ -8,7 +8,7 @@ const RightSide = () => {
 
     return (
         <div className={styles.rightSide}>
-            <Input onChange={onChangeHandler} value={inputs}></Input>
+            <Input onChange={onChangeHandler} value={inputs} data-testid='inputRight'></Input>
         </div>
     )
 } 
