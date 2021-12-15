@@ -27,11 +27,15 @@ import DownloadPage from 'pages/DownloadPage';
 import DetailPost from 'pages/DetailPost';
 import PostPage from 'pages/PostPage';
 import CommentPage from 'pages/CommentPage';
+import { useSelector } from 'react-redux';
 
-class Content extends React.Component {
-    render() {
+const Content =() => {
+    const color = useSelector(function(state){
+        return state.theme.color
+    })
+
         return(
-            <div className={styles.content}>
+            <div className={`${styles.content} ${color ? styles.dark : styles.white}`}>
                 {/* <Form/>
                 {/* <Todo /> */}
                 {/* <ShouldComponentUpdateExample /> */}
@@ -63,7 +67,6 @@ class Content extends React.Component {
             </Routes>
             </div>
         )
-    }
 }
 
 export default Content;

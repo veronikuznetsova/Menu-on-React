@@ -8,7 +8,7 @@ const LeftSide = () => {
 
     return (
         <div className={styles.leftSide}>
-            <Input onChange={onChangeHandler} value={inputs} />
+            <Input onChange={onChangeHandler} value={inputs} data-testid='inputLeft'/>
         </div>
     )
 } 
