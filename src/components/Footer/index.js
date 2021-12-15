@@ -43,7 +43,6 @@ const Footer = () => {
 
             <Button onClick={onClickHandler}>add new item</Button>
             <Input onChange={onChangeHandler}/>
-            <Button>Light/Dark</Button>
             </footer>
         )
 }

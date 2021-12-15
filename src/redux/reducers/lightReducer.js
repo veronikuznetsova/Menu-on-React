@@ -1,12 +1,16 @@
 const initial = {
-    light: true
+    color: true
 }
 
 function lightReducer(state = initial, action) {
     switch(action.type) {
         case 'CHANGE_LIGHT':
             return {
-                light: document.body.classList.toggle('dark')
+                color: true
+            }
+        case 'CHANGE_DARK':
+            return {
+                color: false
             }
         default:
             return state;
