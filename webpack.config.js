@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/index.js'),
+  // entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
@@ -21,6 +22,11 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ] 
   },
   devServer: {
@@ -37,6 +43,7 @@ module.exports = {
     },
 },
   resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       components: path.resolve(__dirname, 'src/components'),
       hoc: path.resolve(__dirname, 'src/HOC'),
